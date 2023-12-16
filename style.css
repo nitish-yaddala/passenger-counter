@@ -1,0 +1,29 @@
+body {
+    background-color: #242333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #fff;
+    color: #242333;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

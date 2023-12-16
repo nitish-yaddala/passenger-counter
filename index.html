@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloading Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+        }
+        #preload-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #preload-image {
+            width: 800px; /* Adjust the size of your image */
+        }
+        #enter-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: green; /* Add this line to set the background color to green */
+            color: white; /* Set text color to white */
+            border: none; /* Remove border for a cleaner look */
+        }
+    </style>
+</head>
+<body>
+
+<div id="preload-container">
+    <img id="preload-image" src="img/dont_laugh.png" alt="Preloaded Image">
+    <br>
+    <button id="enter-button" onclick="enterMainPage()">Enter Main Page</button>
+</div>
+
+<script>
+    function enterMainPage() {
+        // Redirect to your main page
+        window.location.href = "main_page.html";
+    }
+
+    // Ensure the image is fully loaded before displaying it
+    document.getElementById('preload-image').onload = function() {
+        // Once the image is loaded, show the container
+        document.getElementById('preload-container').style.display = 'block';
+        // Allow scrolling
+        document.body.style.overflow = 'auto';
+    };
+</script>
+
+</body>
+</html>
